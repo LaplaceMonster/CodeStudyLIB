@@ -7,20 +7,12 @@
 首先，检查是否已经有 SSH 密钥：
 
 ```
-bash
-
-
-复制编辑
 ls ~/.ssh/id_rsa.pub
 ```
 
 如果已有 `id_rsa.pub`，可以跳过生成密钥步骤。否则，执行以下命令生成新的 SSH 密钥：
 
 ```
-bash
-
-
-复制编辑
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ```
 
@@ -36,7 +28,7 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 启用 SSH 代理并添加密钥：
 
 ```
-bash复制编辑eval "$(ssh-agent -s)"  # 启动 SSH 代理
+eval "$(ssh-agent -s)"  # 启动 SSH 代理
 ssh-add ~/.ssh/id_rsa
 ```
 
@@ -47,10 +39,6 @@ ssh-add ~/.ssh/id_rsa
 复制 SSH 公钥：
 
 ```
-bash
-
-
-复制编辑
 cat ~/.ssh/id_rsa.pub
 ```
 
@@ -68,20 +56,12 @@ cat ~/.ssh/id_rsa.pub
 运行：
 
 ```
-bash
-
-
-复制编辑
 ssh -T git@github.com
 ```
 
 如果成功，会看到类似：
 
 ```
-vbnet
-
-
-复制编辑
 Hi username! You've successfully authenticated, but GitHub does not provide shell access.
 ```
 
@@ -94,37 +74,25 @@ Hi username! You've successfully authenticated, but GitHub does not provide shel
 进入本地 Git 仓库：
 
 ```
-bash
-
-
-复制编辑
 cd /path/to/your/repo
 ```
 
 修改远程地址为 SSH：
 
 ```
-bash
-
-
-复制编辑
 git remote set-url origin git@github.com:username/repository.git
 ```
 
 检查是否修改成功：
 
 ```
-bash
-
-
-复制编辑
 git remote -v
 ```
 
 #### **情况 2：新建 Git 仓库**
 
 ```
-bash复制编辑git init
+git init
 git remote add origin git@github.com:username/repository.git
 ```
 
@@ -133,7 +101,7 @@ git remote add origin git@github.com:username/repository.git
 ### **6. 推送代码**
 
 ```
-bash复制编辑git add .
+git add .
 git commit -m "Initial commit"
 git push -u origin main  # 或者 master，取决于你的默认分支
 ```
