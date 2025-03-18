@@ -1,8 +1,7 @@
 # Python
 
-* Python基础：https://liaoxuefeng.com/books/python/introduction/index.html
-* Python科学计算（推荐）：https://docs.huihoo.com/scipy/scipy-zh-cn/index.html
-* 莫烦Python（实用案例）：https://mofanpy.com
+* **Python基础：https://liaoxuefeng.com/books/python/introduction/index.html**
+* **Python科学计算（推荐）：https://docs.huihoo.com/scipy/scipy-zh-cn/index.html**
 
 ## 修改pip的源地址（加速安装第三方包）
 
@@ -28,3 +27,26 @@ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 
 * 可迭代对象：内部存储了具体的元素，所以可以多次遍历。
 
+## OS模块
+
+**OS模块是Python内置的与操作系统交互的功能模块，主要包括文件和目录管理，进程管理，环境变量的访问等等。非常适合于脚本程序。**
+
+* **常用函数：https://www.runoob.com/python3/python3-os-file-methods.html**
+
+### 目录：
+
+```
+
+```
+
+### 文件：
+
+```
+
+```
+
+
+
+### 进程：
+
+### 环境变量：
